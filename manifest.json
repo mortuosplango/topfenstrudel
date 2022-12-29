@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+  "name": "Topfenstrudel",
+  "version": "1.0",
+
+  "description": "Adds a strudel repl on mastodon posts containing '// # strudel'.",
+
+  "icons": {
+    "48": "icons/spiral.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["embed.js", "ready.js", "topfenstrudel.js"]
+    }
+  ],
+  
+  "permissions": [
+    "*://strudel.tidalcycles.org/*"
+  ]
+}
