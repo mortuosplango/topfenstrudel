@@ -14,7 +14,7 @@ class Strudel extends HTMLElement {
       const src = `https://strudel.tidalcycles.org/#${encodeURIComponent(btoa(code))}`;
       // const src = `http://localhost:3000/#${encodeURIComponent(btoa(code))}`;
       iframe.setAttribute('src', src);
-      iframe.setAttribute('width', '548');
+      iframe.setAttribute('width', '100%');
       iframe.setAttribute('height', '300');
       this.appendChild(iframe);
 
