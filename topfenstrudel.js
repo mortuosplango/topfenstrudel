@@ -12,8 +12,6 @@ ready('div.status__content__text', el =>
       // as the repl is a restricted element and it tries to read an attribute from it
       const div = document.createElement('div')
       div.appendChild(repl)
-
-      // replace post text with repl
       el.appendChild(div)
     }
     // OR look for the special strudel hashtag

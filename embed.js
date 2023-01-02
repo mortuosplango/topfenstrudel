@@ -13,7 +13,7 @@ class Strudel extends HTMLElement {
       const url = this.getAttribute('url')
       const code = (this.innerHTML + '').replace('<!--', '').replace('-->', '').trim();
       const iframe = document.createElement('iframe');
-      const src = url.startsWith('https://strudel.tidalcycles.org')
+      const src = url?.startsWith('https://strudel.tidalcycles.org')
         ? url 
         : `https://strudel.tidalcycles.org/#${encodeURIComponent(btoa(code))}`;
       iframe.setAttribute('src', src);
