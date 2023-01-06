@@ -3,6 +3,7 @@
 // * added timeout
 // * set width to 100%
 // * use url attribute instead of inline code if url is supplied
+// * use code attribute instead of reading/writing innerHTML
 
 class Strudel extends HTMLElement {
   constructor() {
@@ -11,7 +12,7 @@ class Strudel extends HTMLElement {
   connectedCallback() {
     setTimeout(() => {
       const url = this.getAttribute('url')
-      const code = (this.innerHTML + '').replace('<!--', '').replace('-->', '').trim();
+      const code = this.getAttribute('code')?.trim();
       const iframe = document.createElement('iframe');
       const src = url?.startsWith('https://strudel.tidalcycles.org')
         ? url 

@@ -1,7 +1,7 @@
 // find all content texts
 ready('div.status__content__text', el =>  
   { 
-    const strudelLink = el.querySelector('a.status-link[href^="https://strudel.tidalcycles.org"]')
+    const strudelLink = el.querySelector('a.status-link[href^="https://strudel.tidalcycles.org" i]')
     // look for strudel share link
     if (strudelLink) {
       // make a new strudel repl
@@ -18,7 +18,7 @@ ready('div.status__content__text', el =>
     else if (el.innerText.includes('// #strudel')) {
       // make a new strudel repl
       const repl = document.createElement('strudel-repl')
-      repl.innerHTML = `\n<!-- \n${el.innerText} \n --> \n`
+      repl.setAttribute('code', el.innerText)
 
       // pack it in a div so react (?) doesn't throw an error 
       // as the repl is a restricted element and it tries to read an attribute from it
@@ -26,6 +26,6 @@ ready('div.status__content__text', el =>
       div.appendChild(repl)
 
       // replace post text with repl
-      el.innerHTML = div.outerHTML
+      el.replaceChild(div, el.firstChild)
     }
   })

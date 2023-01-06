@@ -1,7 +1,7 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "Topfenstrudel",
-  "version": "1.1.1",
+  "version": "1.1.2",
 
   "description": "Adds a strudel repl on mastodon posts containing '// # strudel' or strudel URLs.",
 
@@ -11,12 +11,12 @@
 
   "content_scripts": [
     {
-      "matches": ["*://*/*"],
-      "js": ["embed.js", "ready.js", "topfenstrudel.js"]
+      "matches": ["https://*/*"],
+      "js": ["custom-elements.min.js", "embed.js", "ready.js", "topfenstrudel.js"]
     }
   ],
   
-  "permissions": [
-    "*://strudel.tidalcycles.org/*"
+  "host_permissions": [
+    "https://strudel.tidalcycles.org/*"
   ]
 }
