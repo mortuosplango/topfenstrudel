@@ -8,7 +8,11 @@ As the web extension API is a web standard, it should probably also work in Chro
 
 Go to [latest release](https://github.com/mortuosplango/topfenstrudel/releases/latest) and download xpi file for Firefox or crx file for Chrome. Firefox should prompt you to install it. If not, try to double click it or drag and drop it onto Firefox. Probably the same in Chrome.
 
-## To run the code
+## To develop
+
+### Code structure
+
+Currently the Firefox and Chrome versions are located in their own folders, which only really differ in their manifests and a polyfill (`custom-elements.min.js`) needed in Chrome. All other files are and should remain identical. As soon as Firefox supports [Manifest v3](https://extensionworkshop.com/documentation/develop/manifest-v3-migration-guide/) the duplicate code can hopefully be removed.
 
 ### Firefox 
 
