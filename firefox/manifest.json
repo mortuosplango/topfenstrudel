@@ -17,6 +17,7 @@
   ],
   
   "permissions": [
-    "https://strudel.tidalcycles.org/*"
+    "https://strudel.tidalcycles.org/*",
+    "https://strudel.cc/*"
   ]
 }

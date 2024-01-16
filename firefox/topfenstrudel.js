@@ -1,7 +1,8 @@
 // find all content texts
 ready('div.status__content__text', el =>  
   { 
-    const strudelLink = el.querySelector('a.status-link[href^="https://strudel.tidalcycles.org" i]')
+    const strudelLinkOld = el.querySelector('a.status-link[href^="https://strudel.tidalcycles.org" i]')
+    const strudelLink = strudelLinkOld || el.querySelector('a.status-link[href^="https://strudel.cc" i]')
     // look for strudel share link
     if (strudelLink) {
       // make a new strudel repl
