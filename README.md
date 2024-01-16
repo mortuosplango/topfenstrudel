@@ -1,6 +1,6 @@
 # Topfenstrudel
 
-This is a proof-of-concept Firefox and Chrome extension that turns Mastodon posts with links to strudel patches on [strudel.tidalcycles.org](https://strudel.tidalcycles.org/) or the string `// #strudel` into [strudel repls](https://github.com/tidalcycles/strudel).
+This is a proof-of-concept Firefox and Chrome extension that turns Mastodon posts with links to strudel patches on [strudel.tidalcycles.org](https://strudel.tidalcycles.org/), [strudel.cc](https://strudel.cc/) or the string `// #strudel` into [strudel repls](https://github.com/tidalcycles/strudel).
 
 As the web extension API is a web standard, it should probably also work in Chrome.
 
