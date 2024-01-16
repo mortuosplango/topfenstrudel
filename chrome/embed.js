@@ -14,9 +14,9 @@ class Strudel extends HTMLElement {
       const url = this.getAttribute('url')
       const code = this.getAttribute('code')?.trim();
       const iframe = document.createElement('iframe');
-      const src = url?.startsWith('https://strudel.tidalcycles.org')
+      const src = url?.startsWith('https://strudel.tidalcycles.org') || url?.startsWith('https://strudel.cc')
         ? url 
-        : `https://strudel.tidalcycles.org/#${encodeURIComponent(btoa(code))}`;
+        : `https://strudel.cc/#${encodeURIComponent(btoa(code))}`;
       iframe.setAttribute('src', src);
       iframe.setAttribute('width', '100%');
       iframe.setAttribute('height', '300');
